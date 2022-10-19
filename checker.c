@@ -22,6 +22,21 @@ int check(const char *format, format_t type[], va_list arg)
 				{
 					l = type[j].print(arg);
 					len += l;
+					break;
+				}
+			}
+			if (type[j].id == NULL && format[i + 1] != ' ')
+			{
+				if (format[i + 1] != '\0')
+				{
+					_putchar(format[i]);
+					_putchar(format[i + 1]);
+					len += 2;
+
+				}
+				else
+				{
+					return (-1);
 				}
 			}
 			i++;
