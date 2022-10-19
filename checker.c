@@ -10,7 +10,7 @@
  */
 int check(const char *format, format_t type[], va_list arg)
 {
-	int i, j, len = 0;
+	int i, j, len = 0, l = 0;
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -20,8 +20,8 @@ int check(const char *format, format_t type[], va_list arg)
 			{
 				if (format[i + 1] == type[j].id[0])
 				{
-					type[j].print(arg);
-					len += 1;
+					l = type[j].print(arg);
+					len += l;
 				}
 			}
 			i++;

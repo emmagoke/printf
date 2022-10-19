@@ -4,15 +4,22 @@
 /**
  * print_string - Prints string to the stdout.
  * @str: The string to be printed.
- * Return: Nothing.
+ * Return: Number of string.
  */
-void print_string(char *str)
+int print_string(char *str)
 {
+	int i = 0;
+
+	if (str == NULL)
+		str = "(nil)";
+	while (str[i] != '\0')
+		i++;
 	if (*str != '\0')
 	{
 		_putchar(*str);
 		print_string(str += 1);
 	}
+	return (i--);
 }
 
 /**

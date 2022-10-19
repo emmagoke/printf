@@ -4,25 +4,28 @@
 /**
  * print_c - Handles character values.
  * @arg: This is va_list type
- * Return: Nothing
+ * Return: The number of character printed.
  */
-void print_c(va_list arg)
+int print_c(va_list arg)
 {
 	int c = va_arg(arg, int);
 
 	_putchar(c);
+	return (1);
 }
 
 /**
  * print_s - Handle string values.
  * @arg: This is va_list type
- * Return: Nothing
+ * Return: Number of character printed
  */
-void print_s(va_list arg)
+int print_s(va_list arg)
 {
 	char *s = va_arg(arg, char *);
+	int n;
 
-	print_string(s);
+	n = print_string(s);
+	return (n);
 }
 
 /**
@@ -30,7 +33,7 @@ void print_s(va_list arg)
  * @arg: This is va_list type
  * Return: Nothing.
  */
-void print_d_i(va_list arg)
+int print_d_i(va_list arg)
 {
 	int num = va_arg(arg, int);
 
@@ -40,29 +43,32 @@ void print_d_i(va_list arg)
 		num *= -1;
 	}
 	print_int(num);
+	return (1);
 }
 
 /**
  * print_per - Prints % value
  * @arg: This is va_list type
- * Return: Nothing.
+ * Return: NUmber of character printed.
  */
-void print_per(va_list arg)
+int print_per(va_list arg)
 {
 	int c = va_arg(arg, int);
 
 	c = '%';
 	_putchar(c);
+	return (1);
 }
 
 /**
  * print_b - Converts unsigned int to binary value.
  * @arg: This is va_list type
- * Return: Nothing.
+ * Return: Number of integer converted
  */
-void print_b(va_list arg)
+int print_b(va_list arg)
 {
 	unsigned int n = va_arg(arg, int);
 
 	_binary(n);
+	return (1);
 }
