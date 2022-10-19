@@ -25,7 +25,7 @@ int print_string(char *str)
 	int i;
 
 	if (str == NULL)
-		str = "(nil)";
+		str = "(null)";
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
