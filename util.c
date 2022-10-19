@@ -16,10 +16,10 @@ void print_int(int n)
 }
 
 /**
- *  * print_string - Prints string to the stdout.
- *   * @str: The string to be printed.
- *    * Return: Number of string.
- *     */
+ * print_string - Prints string to the stdout.
+ * @str: The string to be printed.
+ * Return: Number of string.
+ */
 int print_string(char *str)
 {
 	int i;
