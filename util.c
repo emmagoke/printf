@@ -24,13 +24,14 @@ int print_string(char *str)
 {
 	int i;
 
+	puts("Good\n");
 	if (str == NULL)
 		str = "(null)";
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
 	}
-	return (i--);
+	return (i);
 }
 
 /**
