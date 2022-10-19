@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * print_string - Prints string to the stdout.
+ * @str: The string to be printed.
+ * Return: Nothing.
+ */
 void print_string(char *str)
 {
 	if (*str != '\0')
@@ -10,6 +15,11 @@ void print_string(char *str)
 	}
 }
 
+/**
+ * print_int - Prints integer value to stdout
+ * @n: The integer to print.
+ * Return: Nothing.
+ */
 void print_int(int n)
 {
 	if (n > 9)
@@ -19,6 +29,12 @@ void print_int(int n)
 	_putchar((n % 10) + '0');
 }
 
+/**
+ * _binary - Print an unsigned int to
+ * binary form to stdout
+ * @n: The unsigned int to be converted
+ * Return: Nothing
+ */
 void _binary(unsigned int n)
 {
 	if (n > 2)

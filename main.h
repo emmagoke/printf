@@ -4,6 +4,12 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/**
+ * struct format - This struct has to data type
+ * a char pointer and a function pointer.
+ * @id: A pointer that stores the indentifier.
+ * @print: The function to called.
+ */
 struct format
 {
 	char *id;
