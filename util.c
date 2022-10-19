@@ -2,27 +2,6 @@
 #include "main.h"
 
 /**
- * print_string - Prints string to the stdout.
- * @str: The string to be printed.
- * Return: Number of string.
- */
-int print_string(char *str)
-{
-	int i = 0;
-
-	if (str == NULL)
-		str = "(nil)";
-	while (str[i] != '\0')
-		i++;
-	if (*str != '\0')
-	{
-		_putchar(*str);
-		print_string(str += 1);
-	}
-	return (i--);
-}
-
-/**
  * print_int - Prints integer value to stdout
  * @n: The integer to print.
  * Return: Nothing.
@@ -34,6 +13,24 @@ void print_int(int n)
 		print_int(n / 10);
 	}
 	_putchar((n % 10) + '0');
+}
+
+/**
+ *  * print_string - Prints string to the stdout.
+ *   * @str: The string to be printed.
+ *    * Return: Number of string.
+ *     */
+int print_string(char *str)
+{
+	int i;
+
+	if (str == NULL)
+		str = "(nil)";
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+	return (i--);
 }
 
 /**
