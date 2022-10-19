@@ -17,7 +17,7 @@ struct format
 };
 typedef struct format format_t;
 int _putchar(char c);
-
+int check(const char *format, format_t type[], va_list arg);
 void print_s(va_list);
 void print_c(va_list);
 void print_string(char *);
